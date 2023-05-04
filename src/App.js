@@ -9,11 +9,11 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <ContextProvider>
           <Routes>
-            <Route path='/' element={<MainLayout />}>
+            <Route path='' element={<MainLayout />}>
               <Route index element={<Home />} />
               <Route path='store' element={<Store />} />
               <Route path='cart' element={<Cart />} />
